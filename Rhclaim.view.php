@@ -8,5 +8,6 @@ class RhclaimView extends Rhclaim
 
     function dispRhclaimList() {
         debugPrint("test");
+        debugPrint($this->module_info);
     }
 }
