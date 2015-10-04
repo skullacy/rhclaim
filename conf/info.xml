@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module version="0.2">
-	<title xml:lang="ko">Rhclaim</title>
-	<description xml:lang="ko">Claim module for RetroHouse</description>
+	<title xml:lang="ko">클레임 처리모듈</title>
+	<description xml:lang="ko">레트로하우스 클레임 처리모듈입니다.</description>
 	<version>0.0.1</version>
 	<date>2015-09-14</date>
 	<author email_address="skullacy@gmail.com" link="http://www.skullacy.com">

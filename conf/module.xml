@@ -9,8 +9,8 @@
     </actions>
     <menus>
         <menu name="menu_Rhclaim" type="all">
-            <title xml:lang="ko">Rhclaim</title>
-            <title xml:lang="en">Rhclaim</title>
+            <title xml:lang="ko">클레임 처리</title>
+            <title xml:lang="en">Claim Handling</title>
         </menu>
     </menus>
 </module>
