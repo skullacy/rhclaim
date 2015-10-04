@@ -11,6 +11,7 @@ class RhclaimAdminView extends Rhclaim
 	{
 		$oRhclaimModel = getModel('Rhclaim');
 		$module_config = $oRhclaimModel->getConfig();
+		debugPrint($module_config);
 		Context::set('config', $module_config);
 	}
 
