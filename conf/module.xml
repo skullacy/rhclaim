@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<module>
+	<grants />
+	<permissions />
+	<actions>
+        <action name="dispRhclaimAdminConfig" type="view" admin_index="true" menu_name="menu_Rhclaim" menu_index="true" />
+        <action name="dispRhclaimAdminTabEx" type="view" />
+        <action name="procRhclaimAdminInsertConfig" type="controller" />
+    </actions>
+    <menus>
+        <menu name="menu_Rhclaim" type="all">
+            <title xml:lang="ko">Rhclaim</title>
+            <title xml:lang="en">Rhclaim</title>
+        </menu>
+    </menus>
+</module>

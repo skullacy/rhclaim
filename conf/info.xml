@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="0.2">
+	<title xml:lang="ko">Rhclaim</title>
+	<description xml:lang="ko">Claim module for RetroHouse</description>
+	<version>0.0.1</version>
+	<date>2015-09-14</date>
+	<author email_address="skullacy@gmail.com" link="http://www.skullacy.com">
+		<name xml:lang="ko">skullacy</name>
+	</author>
+</module>
