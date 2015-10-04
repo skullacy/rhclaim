@@ -13,7 +13,15 @@ class RhclaimModel extends Rhclaim
 	{
 		$oModuleModel = getModel('module');
 		$config = $oModuleModel->getModuleConfig('Rhclaim');
+		debugPrint($config);
 
 		return $config;
+	}
+
+	function getModuleInfo($mid = 'Rhclaim') {
+		$oModuleModel = getModel('module');
+		$module_info = $oModuleModel->getModuleInfoByMid($mid);
+		debugPrint($module_info);
+		return $module_info;
 	}
 }

@@ -4,71 +4,42 @@
 <form action="./" method="post" class="x_form-horizontal" id="fo_Rhclaim">
 	<input type="hidden" name="module" value="Rhclaim" />
 	<input type="hidden" name="act" value="procRhclaimAdminInsertConfig" />
-
+	<input type="hidden" name="module_srl" value="{$module_info->module_srl}" />
 	<section class="section">
-		<h1>설정 블록 타이틀</h1>
-		<div class="x_control-group">
-			<div class="x_control-group">
-				<label class="x_control-label" for="checkbox_1">체크박스</label>
-				<div class="x_controls">
-					<input type="checkbox" id="checkbox_1" name="checkbox_1" value="Y" checked="checked"|cond="!!$config->checkbox_1" />
-					<p class="x_help-block">체크가 되어 있으면 Y, 체크가 안되어 있으면 값이 전달되지 않는 체크박스.</p>
-				</div>
-			</div>
-			<label class="x_control-label" for="text_1">한줄 입력</label>
+		<h1>{$lang->subtitle_primary}</h1>
+		<div cond="$logged_info->is_admin == 'Y'" class="x_control-group">
+			<label class="x_control-label" for="mid">{$lang->mid}</label>
 			<div class="x_controls">
-				<input type="text" id="text_1" name="text_1" value="{$config->text_1}" />
-				<p class="x_help-block">한줄을 입력받습니다.</p>
+				<input type="text" name="mid" id="mid" value="{$module_info->mid}" />
+				<a href="#module_name_help" class="x_icon-question-sign" data-toggle>{$lang->help}</a>
+				<p id="module_name_help" class="x_help-block" hidden>{$lang->about_mid}</p>
 			</div>
 		</div>
 		<div class="x_control-group">
-			<label class="x_control-label" for="password_1">비밀번호 1</label>
+			<label class="x_control-label" for="lang_browser_title">{$lang->browser_title}</label>
 			<div class="x_controls">
-				<input type="password" id="password_1" name="password_1" value="{$config->password_1}" />
-				<p class="x_help-block">안전을 위해 두번 받는것이 좋습니다.</p>
+				<input type="text" name="browser_title" id="browser_title" value="<!--@if(strpos($module_info->browser_title, '$user_lang->') === false)-->{$module_info->browser_title}<!--@else-->{htmlspecialchars($module_info->browser_title)}<!--@end-->" class="lang_code" />
+				<a href="#browser_title_help" class="x_icon-question-sign" data-toggle>{$lang->help}</a>
+				<p id="browser_title_help" class="x_help-block" hidden>{$lang->about_browser_title}</p>
 			</div>
 		</div>
 		<div class="x_control-group">
-			<label class="x_control-label" for="password_2">비밀번호 2</label>
+			<label class="x_control-label" for="layout_srl">{$lang->layout}</label>
 			<div class="x_controls">
-				<input type="password" id="password_2" name="password_2" value="{$config->password_2}" />
-				<p class="x_help-block">안전을 위해 두번 받는것이 좋습니다.</p>
-			</div>
-		</div>
-		<div class="x_control-group">
-			<label class="x_control-label" for="textarea_1">여러 줄 입력</label>
-			<div class="x_controls">
-				<textarea id="textarea_1" name="textarea_1">{$config->textarea_1}</textarea>
-				<p class="x_help-block">여러 줄 입력받을수 있습니다.</p>
-			</div>
-		</div>
-		<div class="x_control-group">
-			<label class="x_control-label" for="select_1">콤보 단일 선택</label>
-			<div class="x_controls">
-				<select id="select_1" name="select_1">
-					<option	value="1" selected="selected"|cond="$config->select_1 == '1'">단일 선택 1</option>
-					<option	value="2" selected="selected"|cond="$config->select_1 == '2'">단일 선택 2</option>
-					<option	value="3" selected="selected"|cond="$config->select_1 == '3'">단일 선택 3</option>
+				<select name="layout_srl" id="layout_srl">
+					<option value="0">{$lang->notuse}</option>
+					<option loop="$layout_list => $key, $val" value="{$val->layout_srl}" selected="selected"|cond="$module_info->layout_srl== $val->layout_srl">{$val->title} ({$val->layout})</option>
 				</select>
-				<p class="x_help-block">셀렉트박스 단일 선택입니다.</p>
+				<a href="#layout_help" class="x_icon-question-sign" data-toggle>{$lang->help}</a>
+				<p id="layout_help" class="x_help-block" hidden>{$lang->about_layout}</p>
 			</div>
 		</div>
 		<div class="x_control-group">
-			<label class="x_control-label">라디오 단일 선택</label>
+			<label class="x_control-label" for="skin">{$lang->skin}</label>
 			<div class="x_controls">
-				<input type="radio" name="radio_1" value="1" checked="checked"|cond="$config->radio_1 == '1'" />단일 선택 1
-				<input type="radio" name="radio_1" value="2" checked="checked"|cond="$config->radio_1 == '2'" />단일 선택 2
-				<input type="radio" name="radio_1" value="3" checked="checked"|cond="$config->radio_1 == '3'" />단일 선택 3
-				<p class="x_help-block">라디오 단일 선택입니다.</p>
-			</div>
-		</div>
-		<div class="x_control-group">
-			<label class="x_control-label">체크박스 다중</label>
-			<div class="x_controls">
-				<input type="checkbox" name="check_1[]" value="1" checked="checked"|cond="in_array('1',$config->check_1)" />다중 선택 1
-				<input type="checkbox" name="check_1[]" value="2" checked="checked"|cond="in_array('2',$config->check_1)" />다중 선택 2
-				<input type="checkbox" name="check_1[]" value="3" checked="checked"|cond="in_array('3',$config->check_1)" />다중 선택 3
-				<p class="x_help-block">체크박스 다중 선택입니다.</p>
+				<select name="skin" id="skin" style="width:auto">
+					<option loop="$skin_list=> $key, $val" value="{$key}" selected="selected"|cond="$module_info->skin== $key || (!$module_info->skin && $key=='default')">{$val->title}</option>
+				</select>
 			</div>
 		</div>
 	</section>

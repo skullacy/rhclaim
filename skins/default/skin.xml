@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skin version="0.1">
+    <title xml:lang="ko">클레임 기본 스킨</title>
+    <description xml:lang="ko">
+        레트로하우스 클레임처리 기본스킨
+    </description>
+    <version>1.7</version>
+    <date>2015-09-15</date>
+
+    <author email_address="skullacy@gmail.com" link="http://skullacy.com/">
+        <name xml:lang="ko">skullacy</name>
+    </author>
+    <colorset>
+        <color name="white">
+            <title xml:lang="ko">기본</title>
+        </color>
+    </colorset>
+</skin>
