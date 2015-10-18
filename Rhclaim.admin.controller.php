@@ -16,6 +16,7 @@ class RhclaimAdminController extends Rhclaim
 		$args->mid = $vars->mid;
 		$args->module_srl = $vars->module_srl;
 		$args->layout_srl = $vars->layout_srl;
+		$args->product_module_srl = $vars->product_module_srl;
 		$args->skin = $vars->skin;
 
 		debugPrint($args);
@@ -30,7 +31,7 @@ class RhclaimAdminController extends Rhclaim
 			debugPrint('update');
 			$msg_code = 'success_updated';
 		}
-		exit;
+		
 		if(!in_array(Context::getRequestMethod(),array('XMLRPC','JSON')))
 		{
 			$returnUrl = Context::get('success_return_url') ? Context::get('success_return_url') : getNotEncodedUrl('', 'module', 'admin', 'act', 'dispRhclaimAdminConfig');

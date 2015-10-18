@@ -1,0 +1,6 @@
+<table name="rhclaim_document">
+    <column name="document_srl" type="number" size="11" notnull="notnull" index="idx_document_srl" />
+    <column name="product_srl" type="number" size="11" notnull="notnull" index="idx_product_srl" />
+    <column name="state" type="number" size="11" notnull="notnull" index="idx_state" default="0" />
+    <column name="regdate" type="date" />
+</table>

@@ -7,8 +7,14 @@
         <action name="dispRhclaimAdminTabEx" type="view" />
         <action name="procRhclaimAdminInsertConfig" type="controller" />
 
-        <action name="dispRhclaimList" type="view" index="true" />
+        <action name="dispRhclaimClaimList" type="view" index="true" />
+        <action name="dispRhclaimClaimWrite" type="view" />
 
+        <action name="procRhclaimSearchProducts" type="controller" />
+
+        <action name="dispRhclaimProductList" type="view" />
+        <action name="dispRhclaimProductWrite" type="view" />
+        <action name="dispRhclaimProductView" type="view" /> 
 
     </actions>
     <menus>

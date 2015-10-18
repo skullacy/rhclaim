@@ -1,0 +1,67 @@
+<load target="http://oss.maxcdn.com/semantic-ui/2.1.4/semantic.min.css" />
+<load target="http://oss.maxcdn.com/semantic-ui/2.1.4/semantic.min.js" />
+<load target="css/rh_ui_override.css" />
+
+<div class="ui main container">
+	<h2 class="ui dividing header">접수</h2>
+	
+	<form class="ui form" role="form">
+		<h4 class="ui dividing header">클레임 정보</h4>
+		<input type="hidden" name="mid" value="{$mid}" />
+		<input type="hidden" name="content" value="{$oDocument->getContentText()}" />
+		<input type="hidden" name="document_srl" value="{$document_srl}" />
+		<div class="field">
+			<label>접수제목</label>
+			<input type="text" id="title" name="title" placeholder="접수제목 입력" />
+		</div>
+		<div class="field">
+			<label>접수번호</label>
+			<input type="text" id="claim_num" name="claim_num" placeholder="접수번호 입력" />
+		</div>
+		<div class="two fields">
+			<div class="field">
+				<label>담당자</label>
+				<input type="text" id="assignee" name="assignee" placeholder="담당자 입력" />
+			</div>
+			<div class="field">
+				<label>담당부서</label>
+				<input type="text" id="assignee_part" name="assignee_part" placeholder="담당부서 입력" />
+			</div>
+		</div>
+		<div class="field">
+			<label>클레임 상품</label>
+			<div class="ui fluid category search">
+				<div class="ui icon input">					
+		    		<input class="prompt" type="text" placeholder="클레임 상품 검색..">
+		    		<i class="search icon"></i>
+				</div>
+				<div class="results"></div>
+			</div>
+		</div>
+
+		<h4 class="ui dividing header">클레임 상세내용</h4>
+		<div class="field">
+				<div class="write_editor">
+					{$oDocument->getEditor()}
+				</div>
+		</div>
+
+			
+		<!--// <div class="row">
+			<div class="col-md-12">
+				
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="form-actions pull-right">
+					<button type="submit" class="btn btn-md btn-embossed btn-primary">작성완료</button>
+					<button class="btn btn-md btn-embossed ">취소</button>
+				</div>
+			</div>
+		</div> -->
+		
+	</form>
+</div>
+<script src="js/claimwrite.js"></script>

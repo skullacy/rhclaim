@@ -16,6 +16,13 @@
 			</div>
 		</div>
 		<div class="x_control-group">
+			<label class="x_control-label" for="mid">Product 모듈 Srl</label>
+			<div class="x_controls">
+				<input type="text" name="product_module_srl" id="product_module_srl" value="{$module_info->product_module_srl}" />
+				<p id="module_name_help" class="x_help-block" hidden>가구 품목 게시판을 연결할때 사용되는 module_srl값을 입력해주세요</p>
+			</div>
+		</div>
+		<div class="x_control-group">
 			<label class="x_control-label" for="lang_browser_title">{$lang->browser_title}</label>
 			<div class="x_controls">
 				<input type="text" name="browser_title" id="browser_title" value="<!--@if(strpos($module_info->browser_title, '$user_lang->') === false)-->{$module_info->browser_title}<!--@else-->{htmlspecialchars($module_info->browser_title)}<!--@end-->" class="lang_code" />
